@@ -1,0 +1,11 @@
+[{"userName": "plaski","displayName": "Patryk Łaski","isInstructor": true},
+  {"userName": "jkowalski","displayName": "Jan Kowalski","isInstructor": false},
+  {"userName": "anowak","displayName": "Adam Nowak","isInstructor": false},
+  {"userName": "pscibiorek","displayName": "Przemysław Ścibiorek","isInstructor": false},
+  {"userName": "ajackowski","displayName": "Adam Jackowski","isInstructor": false},
+  {"userName": "dmorenowicz","displayName": "Damian Ziętarski","isInstructor": false},
+  {"userName": "amrchwicki","displayName": "Mariusz Pudzianowski","isInstructor": false},
+  {"userName": "sadasd","displayName": "Adam Małysz","isInstructor": false},
+  {"userName": "wdwd22","displayName": "Robert Lewandowski","isInstructor": false},
+  {"userName": "pootwa","displayName": "Marian Paździoch","isInstructor": true}
+]

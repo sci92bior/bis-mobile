@@ -1,0 +1,20 @@
+const String CONCRETE_MATERIAL_KEY = "concreteMaterial";
+const String ADDITIONAL_MATERIAL_KEY = "additionalMaterial";
+const String OBSTALCE_KEY = "obstacle";
+const String EXPLOSIVE_UNIT_KEY = "explosiveUnit";
+const String EXPLOSIVE_MATERIAL_KEY = "explosiveMaterial";
+const String INITIATION_SYSTEM_KEY = "initiationSystem";
+const String MOUNT_TYPE_KEY = "mountType";
+const String TOOLS_KEY = "tools";
+const String GUNS_KEY = "guns";
+const String AMMO_KEY = "ammo";
+const String COURSE_KEY = "course";
+const String DESTRUCTIONS_KEY = "destructions";
+const String EXERCISES_KEY = "exercises";
+const String USERNAME_KEY = "username";
+const String FULLNAME_KEY = "username";
+const String JWTTOKEN_KEY = "username";
+const String EXPECTED_BEHAVIOUR_KEY = "expectedBehaviour";
+const String EXPECTED_EFFECT_KEY = "expectedEffect";
+const String USERS_KEY = "users";
+

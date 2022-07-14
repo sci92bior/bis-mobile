@@ -1,0 +1,9 @@
+[{"name": "SUPOREX", "aFactor": 0.50},
+  {"name": "Mur z cegły zaprawa wapienna", "aFactor": 1.00},
+  {"name": "Mur z cegły zaprawa cementowa", "aFactor": 1.20},
+  {"name": "Beton", "aFactor": 1.50},
+  {"name": "Żelbet", "aFactor": 5.00},
+  {"name": "Beton", "aFactor": 1.50},
+  {"name": "Pianka", "aFactor": 0.00},
+  {"name": "Styropian", "aFactor": 0.00}
+]
