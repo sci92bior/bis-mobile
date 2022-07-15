@@ -457,6 +457,33 @@ Map<String, dynamic> _$_$_TokenToJson(_$_Token instance) => <String, dynamic>{
       'expiresIn': instance.expiresIn,
     };
 
+_$_DatabaseCategory _$_$_DatabaseCategoryFromJson(Map<String, dynamic> json) {
+  return _$_DatabaseCategory(
+    id: json['id'] as int,
+    name: json['name'] as String,
+    image: json['image'] as String,
+  );
+}
+
+Map<String, dynamic> _$_$_DatabaseCategoryToJson(
+        _$_DatabaseCategory instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'image': instance.image,
+    };
+
+_$_ApiResponse _$_$_ApiResponseFromJson(Map<String, dynamic> json) {
+  return _$_ApiResponse(
+    content: json['content'] as List<dynamic>,
+  );
+}
+
+Map<String, dynamic> _$_$_ApiResponseToJson(_$_ApiResponse instance) =>
+    <String, dynamic>{
+      'content': instance.content,
+    };
+
 _$_AuthDto _$_$_AuthDtoFromJson(Map<String, dynamic> json) {
   return _$_AuthDto(
     token: Token.fromJson(json['token'] as Map<String, dynamic>),

@@ -14,9 +14,9 @@ class StartUpView extends StatelessWidget {
         await model.runStartupLogic();
       }),
       builder: (context, model, child) => Scaffold(
-        body: Container(
-            child:
-          const Text("BIS App")
+        body: Center( child : Container(
+            child: model.isLoading ? const CircularProgressIndicator() : null
+        )
           )
       ),
       viewModelBuilder: () => StartUpViewModel(),

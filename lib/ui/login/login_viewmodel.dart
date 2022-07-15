@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:js';
 
 import 'package:bis/app/app.logger.dart';
 import 'package:bis/app/app.locator.dart';
@@ -19,13 +18,10 @@ import 'login_view.form.dart';
 
 class LoginViewModel extends FormViewModel {
   final log = getLogger('LoginViewModel');
-
   final _navigationService = locator<NavigationService>();
-  final _userService = locator<UserService>();
 
   Future<bool> runAuthentication() async {
     var backendClient = BackendClient();
-    print("$usernameValue, $passwordValue");
     var response = await backendClient.signIn(usernameValue!, passwordValue!);
     try {
       if (response.statusCode == 200) {
@@ -44,22 +40,16 @@ class LoginViewModel extends FormViewModel {
   void setFormStatus() {}
 
   Future saveData() async {
-    log.i('valued:$formValueMap');
-
     try {
       final result = await runBusyFuture(runAuthentication(), throwException: true);
-      log.i(result);
       await _handleAuthenticationResponse(result);
     } on Exception catch (e) {
-      log.e(e.toString());
       setValidationMessage(e.toString());
     }
   }
 
-  /// Checks if the result has an error. If it doesn't we navigate to the success view
-  /// else we show the friendly validation message.
   Future<void> _handleAuthenticationResponse(bool authResult) async {
-      _navigationService.replaceWith(Routes.homeView, arguments: HomeViewArguments(id: 0));
+      _navigationService.replaceWith(Routes.startUpView);
   }
 
   Future<void> saveDataAfterLogin(AuthDto auth) async {

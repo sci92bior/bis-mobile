@@ -3,6 +3,7 @@ import 'package:bis/generated/l10n.dart';
 import 'package:bis/services/course/course_service.dart';
 import 'package:bis/services/database/ammo_service.dart';
 import 'package:bis/services/database/build_material_service.dart';
+import 'package:bis/services/database/categories_service.dart';
 import 'package:bis/services/database/destruction_service.dart';
 import 'package:bis/services/database/exercise_service.dart';
 import 'package:bis/services/database/expected_behaviour_service.dart';
@@ -53,10 +54,10 @@ import 'package:stacked_services/stacked_services.dart';
 
 @StackedApp(
   routes: [
-    MaterialRoute(page: StartUpView, initial: true),
+    MaterialRoute(page: StartUpView),
     MaterialRoute(page: DatabaseView),
     MaterialRoute(page: HomeView),
-    MaterialRoute(page: LoginView),
+    MaterialRoute(page: LoginView , initial: true),
     MaterialRoute(page: ExplosiveMaterialView),
     MaterialRoute(page: BuildMaterialView),
     MaterialRoute(page: AmmoView),
@@ -106,7 +107,8 @@ import 'package:stacked_services/stacked_services.dart';
     Singleton(classType: ExpectedBehaviourService),
     Singleton(classType: ExpectedEffectService),
     Singleton(classType: CourseService),
-    Singleton(classType: PdfService)
+    Singleton(classType: PdfService),
+    Singleton(classType: DatabaseCategoriesService)
   ],
   logger: StackedLogger(),
 )

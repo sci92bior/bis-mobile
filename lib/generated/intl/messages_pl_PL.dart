@@ -83,6 +83,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "courses": MessageLookupByLibrary.simpleMessage("Kursy"),
         "createdDate": MessageLookupByLibrary.simpleMessage("Data utworzenia"),
         "cropper": MessageLookupByLibrary.simpleMessage("Dostosuj"),
+        "dashboard": MessageLookupByLibrary.simpleMessage("Dashboard"),
         "database": MessageLookupByLibrary.simpleMessage("Baza danych"),
         "date": MessageLookupByLibrary.simpleMessage("Data"),
         "delete": MessageLookupByLibrary.simpleMessage("Usuń"),

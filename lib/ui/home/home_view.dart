@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:bis/ui/assess/assess_view.dart';
 import 'package:bis/ui/breach/breach_view.dart';
 import 'package:bis/ui/conventer/shooting_view.dart';
+import 'package:bis/ui/dashboard/dashboard_view.dart';
 import 'package:bis/ui/database/database_view.dart';
 import 'package:bis/ui/database/tool/tool_view.dart';
 import 'package:bis/ui/planner/planner_view.dart';
@@ -77,6 +78,10 @@ class _HomeViewState extends State<HomeView> {
           items: [
             BottomNavigationBarItem(
                 icon:
+                const Icon(FontAwesomeIcons.tachometerAlt),
+                label: I10n.of(context).dashboard),
+            BottomNavigationBarItem(
+                icon:
                     const Icon(FontAwesomeIcons.database),
                 label: I10n.of(context).database),
              BottomNavigationBarItem(
@@ -115,21 +120,24 @@ class _HomeViewState extends State<HomeView> {
     if (!_viewCache.containsKey(index)) {
       switch (index) {
         case 0:
-          _viewCache[index] = const DatabaseView();
+          _viewCache[index] = const DashboardView();
           break;
         case 1:
+          _viewCache[index] = const DatabaseView();
+          break;
+        case 2:
           _viewCache[index] = const BreachView();
           break;
        /* case 2:
           _viewCache[index] = const ShootingView();*/
           break;
-        case 2:
+        case 3:
           _viewCache[index] = const AssessView();
           break;
-        case 3:
+        case 4:
           _viewCache[index] = const PlannerView();
           break;
-        case 4:
+        case 5:
           _viewCache[index] = const CalculatorView(isRapid: false);
           break;
         /*case 6:

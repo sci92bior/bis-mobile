@@ -4591,6 +4591,346 @@ abstract class _Token implements Token {
   _$TokenCopyWith<_Token> get copyWith => throw _privateConstructorUsedError;
 }
 
+DatabaseCategory _$DatabaseCategoryFromJson(Map<String, dynamic> json) {
+  return _DatabaseCategory.fromJson(json);
+}
+
+/// @nodoc
+class _$DatabaseCategoryTearOff {
+  const _$DatabaseCategoryTearOff();
+
+  _DatabaseCategory call(
+      {required int id, required String name, required String image}) {
+    return _DatabaseCategory(
+      id: id,
+      name: name,
+      image: image,
+    );
+  }
+
+  DatabaseCategory fromJson(Map<String, Object> json) {
+    return DatabaseCategory.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DatabaseCategory = _$DatabaseCategoryTearOff();
+
+/// @nodoc
+mixin _$DatabaseCategory {
+  int get id => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  String get image => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DatabaseCategoryCopyWith<DatabaseCategory> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DatabaseCategoryCopyWith<$Res> {
+  factory $DatabaseCategoryCopyWith(
+          DatabaseCategory value, $Res Function(DatabaseCategory) then) =
+      _$DatabaseCategoryCopyWithImpl<$Res>;
+  $Res call({int id, String name, String image});
+}
+
+/// @nodoc
+class _$DatabaseCategoryCopyWithImpl<$Res>
+    implements $DatabaseCategoryCopyWith<$Res> {
+  _$DatabaseCategoryCopyWithImpl(this._value, this._then);
+
+  final DatabaseCategory _value;
+  // ignore: unused_field
+  final $Res Function(DatabaseCategory) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? image = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$DatabaseCategoryCopyWith<$Res>
+    implements $DatabaseCategoryCopyWith<$Res> {
+  factory _$DatabaseCategoryCopyWith(
+          _DatabaseCategory value, $Res Function(_DatabaseCategory) then) =
+      __$DatabaseCategoryCopyWithImpl<$Res>;
+  @override
+  $Res call({int id, String name, String image});
+}
+
+/// @nodoc
+class __$DatabaseCategoryCopyWithImpl<$Res>
+    extends _$DatabaseCategoryCopyWithImpl<$Res>
+    implements _$DatabaseCategoryCopyWith<$Res> {
+  __$DatabaseCategoryCopyWithImpl(
+      _DatabaseCategory _value, $Res Function(_DatabaseCategory) _then)
+      : super(_value, (v) => _then(v as _DatabaseCategory));
+
+  @override
+  _DatabaseCategory get _value => super._value as _DatabaseCategory;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? name = freezed,
+    Object? image = freezed,
+  }) {
+    return _then(_DatabaseCategory(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_DatabaseCategory implements _DatabaseCategory {
+  _$_DatabaseCategory(
+      {required this.id, required this.name, required this.image});
+
+  factory _$_DatabaseCategory.fromJson(Map<String, dynamic> json) =>
+      _$_$_DatabaseCategoryFromJson(json);
+
+  @override
+  final int id;
+  @override
+  final String name;
+  @override
+  final String image;
+
+  @override
+  String toString() {
+    return 'DatabaseCategory(id: $id, name: $name, image: $image)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _DatabaseCategory &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
+            (identical(other.image, image) ||
+                const DeepCollectionEquality().equals(other.image, image)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(name) ^
+      const DeepCollectionEquality().hash(image);
+
+  @JsonKey(ignore: true)
+  @override
+  _$DatabaseCategoryCopyWith<_DatabaseCategory> get copyWith =>
+      __$DatabaseCategoryCopyWithImpl<_DatabaseCategory>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_DatabaseCategoryToJson(this);
+  }
+}
+
+abstract class _DatabaseCategory implements DatabaseCategory {
+  factory _DatabaseCategory(
+      {required int id,
+      required String name,
+      required String image}) = _$_DatabaseCategory;
+
+  factory _DatabaseCategory.fromJson(Map<String, dynamic> json) =
+      _$_DatabaseCategory.fromJson;
+
+  @override
+  int get id => throw _privateConstructorUsedError;
+  @override
+  String get name => throw _privateConstructorUsedError;
+  @override
+  String get image => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$DatabaseCategoryCopyWith<_DatabaseCategory> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ApiResponse _$ApiResponseFromJson(Map<String, dynamic> json) {
+  return _ApiResponse.fromJson(json);
+}
+
+/// @nodoc
+class _$ApiResponseTearOff {
+  const _$ApiResponseTearOff();
+
+  _ApiResponse call({required List<dynamic> content}) {
+    return _ApiResponse(
+      content: content,
+    );
+  }
+
+  ApiResponse fromJson(Map<String, Object> json) {
+    return ApiResponse.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ApiResponse = _$ApiResponseTearOff();
+
+/// @nodoc
+mixin _$ApiResponse {
+  List<dynamic> get content => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ApiResponseCopyWith<ApiResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ApiResponseCopyWith<$Res> {
+  factory $ApiResponseCopyWith(
+          ApiResponse value, $Res Function(ApiResponse) then) =
+      _$ApiResponseCopyWithImpl<$Res>;
+  $Res call({List<dynamic> content});
+}
+
+/// @nodoc
+class _$ApiResponseCopyWithImpl<$Res> implements $ApiResponseCopyWith<$Res> {
+  _$ApiResponseCopyWithImpl(this._value, this._then);
+
+  final ApiResponse _value;
+  // ignore: unused_field
+  final $Res Function(ApiResponse) _then;
+
+  @override
+  $Res call({
+    Object? content = freezed,
+  }) {
+    return _then(_value.copyWith(
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ApiResponseCopyWith<$Res>
+    implements $ApiResponseCopyWith<$Res> {
+  factory _$ApiResponseCopyWith(
+          _ApiResponse value, $Res Function(_ApiResponse) then) =
+      __$ApiResponseCopyWithImpl<$Res>;
+  @override
+  $Res call({List<dynamic> content});
+}
+
+/// @nodoc
+class __$ApiResponseCopyWithImpl<$Res> extends _$ApiResponseCopyWithImpl<$Res>
+    implements _$ApiResponseCopyWith<$Res> {
+  __$ApiResponseCopyWithImpl(
+      _ApiResponse _value, $Res Function(_ApiResponse) _then)
+      : super(_value, (v) => _then(v as _ApiResponse));
+
+  @override
+  _ApiResponse get _value => super._value as _ApiResponse;
+
+  @override
+  $Res call({
+    Object? content = freezed,
+  }) {
+    return _then(_ApiResponse(
+      content: content == freezed
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ApiResponse implements _ApiResponse {
+  _$_ApiResponse({required this.content});
+
+  factory _$_ApiResponse.fromJson(Map<String, dynamic> json) =>
+      _$_$_ApiResponseFromJson(json);
+
+  @override
+  final List<dynamic> content;
+
+  @override
+  String toString() {
+    return 'ApiResponse(content: $content)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ApiResponse &&
+            (identical(other.content, content) ||
+                const DeepCollectionEquality().equals(other.content, content)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(content);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ApiResponseCopyWith<_ApiResponse> get copyWith =>
+      __$ApiResponseCopyWithImpl<_ApiResponse>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ApiResponseToJson(this);
+  }
+}
+
+abstract class _ApiResponse implements ApiResponse {
+  factory _ApiResponse({required List<dynamic> content}) = _$_ApiResponse;
+
+  factory _ApiResponse.fromJson(Map<String, dynamic> json) =
+      _$_ApiResponse.fromJson;
+
+  @override
+  List<dynamic> get content => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ApiResponseCopyWith<_ApiResponse> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 AuthDto _$AuthDtoFromJson(Map<String, dynamic> json) {
   return _AuthDto.fromJson(json);
 }

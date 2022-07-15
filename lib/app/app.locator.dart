@@ -14,6 +14,7 @@ import '../generated/l10n.dart';
 import '../services/course/course_service.dart';
 import '../services/database/ammo_service.dart';
 import '../services/database/build_material_service.dart';
+import '../services/database/categories_service.dart';
 import '../services/database/destruction_service.dart';
 import '../services/database/exercise_service.dart';
 import '../services/database/expected_behaviour_service.dart';
@@ -60,4 +61,5 @@ void setupLocator({String? environment, EnvironmentFilter? environmentFilter}) {
   locator.registerSingleton(ExpectedEffectService());
   locator.registerSingleton(CourseService());
   locator.registerSingleton(PdfService());
+  locator.registerSingleton(DatabaseCategoriesService());
 }

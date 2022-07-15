@@ -42,10 +42,10 @@ import '../ui/startup/startup_view.dart';
 import '../ui/tools/calculator_view.dart';
 
 class Routes {
-  static const String startUpView = '/';
+  static const String startUpView = '/start-up-view';
   static const String databaseView = '/database-view';
   static const String homeView = '/home-view';
-  static const String loginView = '/login-view';
+  static const String loginView = '/';
   static const String explosiveMaterialView = '/explosive-material-view';
   static const String buildMaterialView = '/build-material-view';
   static const String ammoView = '/ammo-view';

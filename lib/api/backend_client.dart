@@ -12,17 +12,7 @@ import '../utils/shared_preferences.dart';
 
 class BackendClient {
 
-  late BackendClient instance;
-
-  final log = getLogger('BackendClient');
-
-  Future initialise() async {
-    log.i('Load storage');
-    instance =  BackendClient();
-    log.v('Storage loaded');
-  }
-
-  var url = "http://192.168.1.158:8080";
+  var url = "http://192.168.93.122:8080/api";
 
 /*  Future<http.Response?> createDevice(String producer, String model,
       String osVersion, String deviceId, String firebaseId) async {
@@ -166,6 +156,18 @@ class BackendClient {
         },
         body: body
     );
+  }
+
+  Future<http.Response?> getDatabaseCategories() async {
+    var jwtToken = await MySharedPreferences.instance.getStringValue("jwtToken");
+    return http.get(
+        Uri.parse('$url/categories?filter={}&pageNo=1&pageSize=20&sort=+name'),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+          HttpHeaders.authorizationHeader: 'Bearer $jwtToken',
+        }
+    );
+
   }
 
 

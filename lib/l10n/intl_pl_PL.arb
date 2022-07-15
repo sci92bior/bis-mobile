@@ -117,5 +117,6 @@
   "page": "Strona",
   "printDate": "Data wydruku",
   "general": "Ogólne",
-  "noDescription": "Brak opisu!"
+  "noDescription": "Brak opisu!",
+  "dashboard": "Dashboard"
 }

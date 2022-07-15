@@ -22,6 +22,7 @@ import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
 import 'package:bis/generated/l10n.dart';
 
+import '../../services/database/categories_service.dart';
 import '../../services/pdf/pdf_service.dart';
 
 class StartUpViewModel extends BaseViewModel {
@@ -44,8 +45,12 @@ class StartUpViewModel extends BaseViewModel {
   final _expectedEffectService= locator<ExpectedEffectService>();
   final _courseService= locator<CourseService>();
   final _pdfService = locator<PdfService>();
+  final _databaseCategoryService = locator<DatabaseCategoriesService>();
+
+  var isLoading = true;
 
   Future<void> runStartupLogic() async {
+    isLoading = true;
     await _storageService.initialise();
     await _concreteMaterialService.initialise();
     await _obstacleService.initialise();
@@ -64,6 +69,8 @@ class StartUpViewModel extends BaseViewModel {
     await _expectedEffectService.initialise();
     await _courseService.initialise();
     await _pdfService.initialise();
-    _navigationService.clearStackAndShow(Routes.loginView);
+    await _databaseCategoryService.initialise();
+    isLoading = false;
+    _navigationService.clearStackAndShow(Routes.homeView, arguments: HomeViewArguments(id: 0));
   }
 }

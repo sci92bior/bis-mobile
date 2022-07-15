@@ -284,6 +284,28 @@ abstract class Token with _$Token{
 }
 
 @freezed
+abstract class DatabaseCategory with _$DatabaseCategory{
+  factory DatabaseCategory(
+
+      { required int id,
+        required String name,
+        required String image}) = _DatabaseCategory;
+
+  factory DatabaseCategory.fromJson(Map<String, dynamic> json) =>
+      _$DatabaseCategoryFromJson(json);
+}
+
+@freezed
+abstract class ApiResponse with _$ApiResponse{
+  factory ApiResponse(
+
+      { required List<dynamic> content}) = _ApiResponse;
+
+  factory ApiResponse.fromJson(Map<String, dynamic> json) =>
+      _$ApiResponseFromJson(json);
+}
+
+@freezed
 abstract class AuthDto with _$AuthDto{
   factory AuthDto(
 

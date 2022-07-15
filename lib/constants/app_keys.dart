@@ -8,6 +8,7 @@ const String MOUNT_TYPE_KEY = "mountType";
 const String TOOLS_KEY = "tools";
 const String GUNS_KEY = "guns";
 const String AMMO_KEY = "ammo";
+const String CATEGORY_KEY = "ammo";
 const String COURSE_KEY = "course";
 const String DESTRUCTIONS_KEY = "destructions";
 const String EXERCISES_KEY = "exercises";
